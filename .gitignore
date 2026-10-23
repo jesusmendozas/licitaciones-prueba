@@ -1,0 +1,25 @@
+# Credenciales locales. La plantilla versionada es .env.example.
+.env
+.env.local
+.env.*.local
+
+# Dependencias
+/vendor/
+/node_modules/
+
+# Documentos cargados en las ofertas (PDF y ZIP)
+/storage/uploads/*
+!/storage/uploads/.gitkeep
+
+# Logs y caché de runtime
+*.log
+/storage/logs/*
+!/storage/logs/.gitkeep
+
+# IDE y sistema
+.idea/
+.vscode/
+*.swp
+Thumbs.db
+Desktop.ini
+.DS_Store
