@@ -7,6 +7,10 @@
 /vendor/
 /node_modules/
 
+# Frontend compilado. Se genera con npm run build.
+/public/assets/
+/public/index.html
+
 # Documentos cargados en las ofertas (PDF y ZIP)
 /storage/uploads/*
 !/storage/uploads/.gitkeep
