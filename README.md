@@ -26,11 +26,10 @@ cp .env.example .env
 
 Completa `DB_PASSWORD` si el usuario de MySQL la tiene. La base configurada es `licitaciones`.
 
-3. Crear las tablas y cargar las actividades desde el Excel. El script SQL borra las tablas si ya existen. El PHP lee `bd/maestra-actividades.xlsx` e inserta los productos; la aplicación no vuelve a abrir ese archivo.
+3. Con MySQL en ejecución, crear la base y cargar las actividades. PHP se conecta con los datos del `.env`. El script borra las tablas si ya existen. Lee `bd/maestra-actividades.xlsx` e inserta los productos; la aplicación no vuelve a abrir ese archivo.
 
 ```bash
-mysql -u root -p < bd/01_estructura.sql
-php bd/load_activities.php
+php bd/setup.php
 ```
 
 La carga trae el clasificador completo y puede tardar un momento. Cada producto se guarda por su código: si se vuelve a cargar el Excel, se actualizan los nombres y se conserva el id que ya usan las ofertas. Si el Excel deja fuera una actividad que está en uso, la carga se detiene y no modifica la maestra.

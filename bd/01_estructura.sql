@@ -1,7 +1,8 @@
 -- Estructura de la base de licitaciones, con las columnas que pide el enunciado.
 -- Fecha y hora quedan separadas, y el documento apunta a la oferta con licitacion_id.
 -- No hay tabla pivote: una oferta tiene una actividad y un documento pertenece a una oferta.
--- Después de este script, cargar las actividades con: php bd/load_activities.php
+
+-- crea esta base y después carga las actividades.
 
 CREATE DATABASE IF NOT EXISTS licitaciones
   CHARACTER SET utf8mb4

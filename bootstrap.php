@@ -25,6 +25,10 @@ require __DIR__ . '/vendor/autoload.php';
 function failRequest(Throwable $e): void
 {
     Logger::error($e);
+    if (PHP_SAPI === 'cli') {
+        fwrite(STDERR, $e->getMessage() . PHP_EOL);
+        exit(1);
+    }
     if (headers_sent()) {
         return;
     }
