@@ -6,7 +6,7 @@ El proyecto sigue el patrón **MVC**. El controlador valida y aplica las reglas,
 
 **Backend.** PHP 8, sin framework. Los modelos usan Eloquent en su versión independiente (`illuminate/database`) y la base es MySQL 8. El Excel se genera con PhpSpreadsheet.
 
-**Frontend.** Vue 2.7, con componentes `.vue`, Axios y Bootstrap 5. Vite compila esas pantallas antes de servirlas.
+**Frontend.** Vue 2.7, con componentes `.vue`, Axios y Bootstrap 5.3 . Vite compila esas pantallas antes de servirlas.
 
 ## Puesta en marcha
 
